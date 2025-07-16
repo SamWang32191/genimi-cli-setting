@@ -1,0 +1,20 @@
+{
+  "theme": "Atom One",
+  "selectedAuthType": "oauth-personal",
+  "sandbox": true,
+  "checkpointing": {
+    "enabled": true
+  },
+  "allowMCPServers": [
+    "context7"
+  ],
+  "mcpServers": {
+    "context7": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ]
+    }
+  }
+}

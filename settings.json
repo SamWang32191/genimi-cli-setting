@@ -1,7 +1,7 @@
 {
   "theme": "Atom One",
   "selectedAuthType": "oauth-personal",
-  "sandbox": true,
+  "sandbox": false,
   "checkpointing": {
     "enabled": true
   },
@@ -14,6 +14,14 @@
       "args": [
         "-y",
         "@upstash/context7-mcp"
+      ]
+    },
+    "k8s-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "kubernetes-mcp-server@latest",
+        "--read-only"
       ]
     }
   }

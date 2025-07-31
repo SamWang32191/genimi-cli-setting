@@ -7,7 +7,8 @@
   },
   "allowMCPServers": [
     "context7",
-    "k8s-mcp"
+    "k8s-mcp",
+    "podman-mcp"
   ],
   "mcpServers": {
     "context7": {
@@ -23,6 +24,13 @@
         "-y",
         "kubernetes-mcp-server@latest",
         "--read-only"
+      ]
+    },
+    "podman-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "podman-mcp-server@latest"
       ]
     }
   }

@@ -6,7 +6,8 @@
     "enabled": true
   },
   "allowMCPServers": [
-    "context7"
+    "context7",
+    "k8s-mcp"
   ],
   "mcpServers": {
     "context7": {

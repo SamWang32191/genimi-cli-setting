@@ -5,7 +5,7 @@
   "checkpointing": {
     "enabled": true
   },
-  "allowMCPServers": ["context7", "k8s-mcp"],
+  "allowMCPServers": ["context7", "k8s-mcp","intellij"],
   "mcpServers": {
     "context7": {
       "command": "npx",

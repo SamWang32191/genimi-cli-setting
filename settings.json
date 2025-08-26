@@ -5,25 +5,29 @@
   "checkpointing": {
     "enabled": true
   },
-  "allowMCPServers": [
-    "context7",
-    "k8s-mcp"
-  ],
+  "allowMCPServers": ["context7", "k8s-mcp"],
   "mcpServers": {
     "context7": {
       "command": "npx",
-      "args": [
-        "-y",
-        "@upstash/context7-mcp"
-      ]
+      "args": ["-y", "@upstash/context7-mcp"]
     },
     "k8s-mcp": {
       "command": "npx",
+      "args": ["-y", "kubernetes-mcp-server@latest", "--read-only"]
+    },
+    "intellij": {
+      "type": "stdio",
+      "env": {
+        "IJ_MCP_SERVER_PORT": "64342"
+      },
+      "command": "/Users/samwang/Applications/IntelliJ IDEA Ultimate.app/Contents/jbr/Contents/Home/bin/java",
       "args": [
-        "-y",
-        "kubernetes-mcp-server@latest",
-        "--read-only"
+        "-classpath",
+        "/Users/samwang/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/mcpserver/lib/mcpserver-frontend.jar:/Users/samwang/Applications/IntelliJ IDEA Ultimate.app/Contents/lib/util-8.jar",
+        "com.intellij.mcpserver.stdio.McpStdioRunnerKt"
       ]
     }
-  }
+  },
+  "hasSeenIdeIntegrationNudge": true,
+  "ideMode": true
 }
